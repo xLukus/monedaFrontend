@@ -21,11 +21,11 @@ export default function LastUpdated({
         height={2950}
         className="absolute z-[-1] "
       />
-      <p className="text-yellow-400 font-semibold text-[3rem]">
+      <p className="text-yellow-400 font-semibold text-[2rem]">
         {text.text5} {formatted}
       </p>
 
-      <p className="text-white/70 max-w-[70%] mx-auto text-[1.5rem] leading-relaxed">
+      <p className="text-white/70 max-w-[70%] mx-auto text-[1rem] leading-relaxed">
         {text.text6}
       </p>
     </div>

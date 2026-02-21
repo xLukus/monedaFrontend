@@ -10,6 +10,7 @@ import HistoryTimeline from "@/components/HistoryTimeline";
 import { getRates } from "@/lib/getRates";
 import RatesTable from "@/components/RatesTable";
 import LastUpdated from "@/components/LastUpdated";
+import { title } from "process";
 
 const clients = [
   { name: "Марко Петровски", role: "Задоволен Клиент" },
@@ -74,6 +75,7 @@ export default async function HomePage({ params }: { params: any }) {
   const items = [
     {
       icon: <Bitcoin className="w-10 h-10 text-yellow-400" />,
+      title: t.Section2.text3,
       text: t.Section2.text4,
     },
     {
@@ -136,10 +138,12 @@ export default async function HomePage({ params }: { params: any }) {
           <div className="w-[77%] h-auto flex justify-between items-center lg:flex-row flex-col">
             <section className="w-full w-min-4xl h-150 flex items-center">
               <div className="w-[80%]">
-                <h1 className=" xlg:text-[64px] lg:text-[54px] text-[38px] font-bold">
+                <h1 className=" xlg:text-[64px] lg:text-[54px] xs:text-[48px] text-[28px] font-bold">
                   {t.Hero.text1}
                 </h1>
-                <h2 className="text-[27px] my-6">{t.Hero.text2}</h2>
+                <h2 className="text-[20px] xs:text-[28px] md:text-[28px] my-6">
+                  {t.Hero.text2}
+                </h2>
 
                 <Link
                   href={`/${locale}/exchange`}
@@ -166,7 +170,7 @@ export default async function HomePage({ params }: { params: any }) {
         <ClientMarquee clients={clients} />
       </main>
       {/* SECTION 2---------------------------------------------------------------------------------- */}
-      <div className="w-full h-170 mt-[300px] flex justify-center items-center relative">
+      <div className="w-full h-170 xs:mt-[300px] mt-0 flex justify-center items-center relative">
         <div className="w-[77%] h-150 flex justify-center items-center">
           <Image
             src="/Images/backgrounds/6438f73a-f37f-4454-9e5e-a36294997af7.png"
@@ -178,8 +182,12 @@ export default async function HomePage({ params }: { params: any }) {
 
           <section className="w-full h-150 flex items-center">
             <div className="md:w-[50%] sm:w-[70%] w-full">
-              <h2 className="text-[48px] font-bold">{t.Section1.text1}</h2>
-              <h3 className="text-[24px] my-6">{t.Section1.text2}</h3>
+              <h2 className="text-[38px] xs:text-[48px]  font-bold">
+                {t.Section1.text1}
+              </h2>
+              <h3 className="text-[20px] xs:text-[28px] s:text-[20px] md:text-[20px] my-6">
+                {t.Section1.text2}
+              </h3>
 
               <div className="flex row justify-start items-top">
                 <Image
@@ -246,7 +254,7 @@ export default async function HomePage({ params }: { params: any }) {
           </div>
         </section>
       </div>
-      <HistoryTimeline items={events} />;
+      <HistoryTimeline items={events} />
       {/* -------------------------------------------------------------------------SECTION 4 */}
       <div className="w-full h-170 mt-[200px]  flex justify-center items-center relative">
         <Image
@@ -263,11 +271,13 @@ export default async function HomePage({ params }: { params: any }) {
                 {t.Section4.text1}
               </span>
             </div>
-            <h2 className="text-[48px] font-bold ">
+            <h2 className="xlg:text-[64px] lg:text-[48px] xs:text-[48px] text-[28px] font-bold ">
               {t.Section4.text2}{" "}
               <span className="text-yellow-400"> {t.Section4.text12}</span>
             </h2>
-            <h3 className="text-[24px] my-6">{t.Section4.text3}</h3>{" "}
+            <h3 className="xlg:text-[64px] lg:text-[28px] xs:text-[28px] text-[18px] font-bold  my-6">
+              {t.Section4.text3}
+            </h3>{" "}
           </section>
           <section className="max-w-7xl mt-10">
             <FAQAccordion faqs={faqs} />
@@ -299,13 +309,13 @@ export default async function HomePage({ params }: { params: any }) {
                 {t.Section5.text1}
               </span>
             </div>
-            <h2 className="text-[48px] text-end font-bold ">
+            <h2 className="xlg:text-[64px] lg:text-[48px] xs:text-[48px] text-[28px] text-end font-bold ">
               {t.Section5.text2}{" "}
               <span className="text-yellow-400 text-end">
                 {t.Section5.text12}
               </span>
             </h2>
-            <h3 className="text-[24px] my-6 text-end">
+            <h3 className="xlg:text-[64px] lg:text-[28px] xs:text-[28px] text-[18px] my-6 text-end">
               {t.Section5.text3}
             </h3>{" "}
           </section>

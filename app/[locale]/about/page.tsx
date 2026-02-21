@@ -29,7 +29,7 @@ export default async function About({ params }: { params: any }) {
         <div className="flex w-[77%]  flex-col items-center justify-between gap-20 lg:flex-row">
           {/* TEXT */}
           <section className="w-full lg:w-1/2">
-            <h1 className="text-3xl font-bold lg:text-[45px] z-20">
+            <h1 className="text-[18px] font-bold lg:text-[40px] md:text-[30px] z-20">
               {t.About.text1}
             </h1>
 
@@ -41,32 +41,14 @@ export default async function About({ params }: { params: any }) {
           </section>
 
           {/* IMAGES */}
-          <section className="relative flex w-full max-w-md items-center justify-center lg:w-1/2">
+          <section className="relative flex w-full max-w-lg items-center justify-center lg:w-1/2">
             {/* background main image */}
             <Image
-              src="/Images/about/Group 10.svg"
+              src="/Images/backgrounds/Group 28.png"
               alt="Moneda store front"
-              width={400}
-              height={650}
-              className="z-0"
-            />
-
-            {/* left floating image */}
-            <Image
-              src="/Images/about/Group 9.svg"
-              alt="Inside Moneda Exchange"
-              width={250}
-              height={450}
-              className="absolute -bottom-10 -left-10 z-10 md:-left-40"
-            />
-
-            {/* right floating image */}
-            <Image
-              src="/Images/about/Group 11.svg"
-              alt="Outside Moneda Exchange"
-              width={250}
-              height={450}
-              className="absolute -bottom-10 -right-6 z-10 md:-right-40"
+              width={1200}
+              height={850}
+              className="z-0 w-[1500px] h-auto"
             />
           </section>
         </div>

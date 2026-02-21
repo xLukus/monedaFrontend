@@ -14,7 +14,7 @@ export default function MonedaGrid(data: any) {
           height={1950}
           className="absolute top-50 z-[-1]"
         />
-        <div className="max-w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="w-full lg:max-w-[70%] mds:max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Top left text card */}
           <div
             className="md:col-span-2 moneda-card rounded-3xl bg-gradient-to-br from-[#1b1f21]/80 to-[#111415]/80 backdrop-blur-sm

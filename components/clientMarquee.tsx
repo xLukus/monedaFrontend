@@ -17,7 +17,7 @@ export default function ClientMarquee({ clients }: { clients: Client[] }) {
   const duplicated = [...clients, ...clients];
 
   return (
-    <div className="relative overflow-hidden mt-90 lg:mt-30 py-6">
+    <div className="relative overflow-hidden mt-30 xs:mt-90 lg:mt-30 py-6">
       {/* gradient edges */}
       <div className="pointer-events-none absolute inset-y-0 left-0 w-24 " />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-24 " />
@@ -28,7 +28,7 @@ export default function ClientMarquee({ clients }: { clients: Client[] }) {
             key={i}
             className="mx-10 flex items-center gap-3 rounded-full bg-zinc-900 px-8 py-3 text-white shadow-md"
           >
-            <div className="h-12 w-12 rounded-full bg-yellow-500" />
+            <div className="h-10 w-12 rounded-full bg-yellow-500" />
             <div className="text-m leading-tight">
               <p className="font-semibold">{c.name}</p>
               <p className="text-zinc-400">{c.role}</p>
